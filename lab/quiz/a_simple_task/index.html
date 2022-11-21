@@ -10,13 +10,13 @@
 				return Math.floor(Math.random() * (r - l + 1) ) + l;
 			}
 			var qid, q_list;
-			async function load() {
+			function load() {
 				const response = await fetch("./data.json");
 				q_list = await response.json();
-				console.log(q_list);
+				// console.log(q_list);
 			}
 			function make() {
-				qid = randint(0, 9);
+				qid = randint(0, q_list.length - 1);
 				document.getElementById('q1').innerHTML = q_list[qid].q;
 				document.getElementById('in1').value = "";
 				document.getElementById('ret1').innerHTML = "";
@@ -30,7 +30,7 @@
 			}
 		</script>
 	</head>
-	<body onload="load(); make();">
+	<body onload="await load(); make();">
 		<div>
 			<h1>一个简单的问题</h1>
 			<p>请写出下面这个问题的答案：</p>
