@@ -11,8 +11,8 @@
 			}
 			var qid, q_list;
 			function load() {
-				const response = await fetch("./data.json");
-				q_list = await response.json();
+				const response = fetch("./data.json");
+				q_list = response.json();
 				// console.log(q_list);
 			}
 			function make() {
