@@ -10,9 +10,9 @@
 				return Math.floor(Math.random() * (r - l + 1) ) + l;
 			}
 			var qid, q_list;
-			function load() {
-				const response = fetch("./data.json");
-				q_list = response.json();
+			async function load() {
+				const response = await fetch("./data.json");
+				q_list = await response.json();
 				// console.log(q_list);
 			}
 			function make() {
