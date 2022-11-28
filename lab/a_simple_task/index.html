@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset='UTF-8'>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+		<link rel="stylesheet" href="../src/css/main_theme.css">
+		<link rel="stylesheet" href="../src/css/lab.css">
+		<link rel="stylesheet" href="./modal.css">
+		<link rel="shortcut icon" href="./icon.ico">
+		<title>一个简单的问题</title>
+		<script src="./data.js"></script>  <!-- 题目数据 -->
+		<script>
+			function randint(l, r) {
+				return Math.floor(Math.random() * (r - l + 1) ) + l;
+			}
+			var qid, modal;
+			function make() {
+				qid = randint(0, q_list.length - 1);
+				katex.render(q_list[qid].q, document.getElementById("q1"));
+				document.getElementById('in1').value = "";
+			}
+			function check() {
+				var input = document.getElementById('in1').value;
+				if (input == q_list[qid].ans) modal = document.getElementById('ac-modal');
+				else modal = document.getElementById('wa-modal');
+				modal.style.display = "block";
+			}
+		</script>
+	</head>
+	<body onload="make();">
+		<div>
+			<h1>一个简单的问题</h1>
+			<p>请写出下面这个问题的答案：</p>
+			<p id="q1"></p>
+			<input id="in1" style="width: auto;">
+			<button type="submit" onclick="check()">提交</button>
+			<button type="button" onclick="make()">再来一题</button>
+			<div id="ac-modal" class="modal">
+				<div class="modal-content">
+					<div class="modal-header" style="background-color: mediumseagreen;">
+						<h2>答案正确</h2>
+					</div>
+					<div class="modal-body">
+						<p>您的答案是正确的、中肯的、一针见血的。<br>并且，和标准答案一字不差。</p>
+					</div>
+				</div>
+			</div>
+			<div id="wa-modal" class="modal">
+				<div class="modal-content">
+					<div class="modal-header" style="background-color: tomato;">
+						<h2>答案错误</h2>
+					</div>
+					<div class="modal-body">
+						<p>您的答案是错误的、偏颇的、模棱两可的。<br>并且，和标准答案有一点差别。<br>你可以试着换一种表达方式。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		window.onclick = function(event) {
+			if (event.target == modal) modal.style.display = "none";
+		}
+	</script>
+</html>
