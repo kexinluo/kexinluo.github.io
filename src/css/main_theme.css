@@ -43,8 +43,8 @@
 body {
     font-family: "Roboto Slab", "SimHei", serif;
     /* background-color: rgb(255, 255, 255); */
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 html {
