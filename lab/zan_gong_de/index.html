@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset='UTF-8'>
+		<link rel="shortcut icon" href="./icon.png">
+		<link rel="stylesheet" href="./main.css">
+		<title>电子木鱼</title>
+	</head>
+	<body onload="update();">
+		<div id="muyu" class="muyu" onmousedown="jiagongde(1);">
+			<img class="muyu" src="./muyu1.png">
+		</div>
+		<div id="gongde_counter" class="counter"></div>
+		<div id="gongde_speed_counter" class="counter"></div>
+		<div id="shop">
+			<header>草市</header>
+			<div onclick="shop_buy('gunzi');" id="shop_card_gunzi" class="shop_card">
+				<img src="./shop_card/gunzi.png">
+				<span id="shop_card_gunzi_tip" class="shop_card_tip">
+					<header>棍仗</header>
+					<p>庶棍也。一秒可一鼓。</p>
+					<footer>直伍拾功德</footer>
+				</span>
+			</div>
+			<div onclick="shop_buy('daodejing');" id="shop_card_daodejing" class="shop_card">
+				<img src="./shop_card/daodejing.png">
+				<span id="shop_card_gunzi_tip" class="shop_card_tip">
+					<header>道德经</header>
+					<p>道可道，非常道。一目十行，是一秒十鼓能也。</p>
+					<footer>直贰佰功德</footer>
+				</span>
+			</div>
+			<div onclick="shop_buy('wtx');" id="shop_card_wtx" class="shop_card">
+				<img src="./shop_card/wtx.png">
+				<span id="shop_card_gunzi_tip" class="shop_card_tip">
+					<header>王同西</header>
+					<p>嗯？区区小贼，何足挂齿！左将军之威风可辱哉？俺王同西来也！不服来战！呵！『萬統希』之秘術！</p>
+					<footer>直壹万功德</footer>
+				</span>
+			</div>
+		</div>
+	</body>
+	<script src="./main.js"></script>
+</html>

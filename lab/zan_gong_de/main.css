@@ -1,0 +1,122 @@
+@font-face {
+	font-family: "SYST";
+	src: url("./SourceHanSerifCN-Regular-1.otf");
+}
+
+* {
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+}
+
+body {
+	font-family: "SYST", serif;
+}
+
+.muyu {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 256px;
+	height: 256px;
+	margin-left: -128px;
+	margin-top: -128px;
+	transition: transform 0.2s;
+	transform: scale(1.0);
+}
+
+.muyu:hover {
+	transform: scale(1.1);
+}
+
+.muyu:active {
+	transform: scale(1.0);
+}
+
+img.muyu {
+	width: 100%;
+	height: 100%;
+}
+
+#gongde_counter {
+	text-align: center;
+	font-size: 50pt;
+}
+
+#gongde_speed_counter {
+	text-align: center;
+	font-size: 30pt;
+	color: grey;
+}
+
+#shop {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 200px;
+	height: 100%;
+	background: grey;
+	border-right: 10px groove purple;
+}
+
+#shop > header {
+	font-size: 50pt;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+}
+
+.shop_card {
+	position: static;
+	margin: 10px auto;
+	font-size: 20pt;
+	text-align: center;
+	width: 90%;
+	border: 5px groove #2f2f2f;
+	background: #2f2f2f;
+	transition: border background 0.5s;
+}
+
+.shop_card p {
+	font-size: 15pt;
+}
+
+.shop_card img {
+	width: 90%;
+	margin: 0 auto;
+	filter: brightness(0);
+	transition: filter 0.5s;
+}
+
+.shop_card_tip {
+	position: absolute;
+	background: black;
+	color: white;
+	width: 200px;
+	border: 5px groove blue;
+}
+
+.shop_card_tip header {
+	color: yellow;
+	font-weight: bold;
+}
+
+.shop_card_tip p {
+	text-align: left;
+	margin: 10px;
+}
+
+.shop_card_tip footer {
+	color: red;
+}
+
+.shop_card .shop_card_tip {
+	visibility: hidden;
+}
+
+.shop_card:hover .shop_card_tip {
+	visibility: visible;
+}
+
+.shop_card:hover .unlock {
+	visibility: hidden;
+}
