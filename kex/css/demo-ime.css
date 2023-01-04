@@ -1,0 +1,78 @@
+#demo-ime {
+	display: block;
+	resize: none;
+	font-size: 20pt;
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	outline: none;
+	border: 1px solid #5C8DD6;
+	border-radius: 5px;
+	background: hsl(216, 10%, 97%);
+	transition: background 0.2s;
+	-webkit-transition: background 0.2s;
+}
+
+.keyboard-br {
+	width: 100%;
+}
+
+#demo-ime-keyboard {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 650px;
+	text-align: center;
+	margin: auto;
+}
+
+#demo-ime-keyboard > button {
+	font-size: 20pt;
+	padding: 10px;
+	outline: none;
+	border: 1px solid darkgrey;
+	border-radius: 5px;
+	margin: 2px;
+	transition: filter 0.2s;
+	-webkit-transition: filter 0.2s;
+	filter: brightness(1.0);
+}
+
+#demo-ime-keyboard > button:hover {
+	filter: brightness(0.8);
+}
+
+#keboard-spacebar {
+	width: 70%;
+}
+
+.keyboard-aux {
+	background: pink;
+	color: tomato;
+}
+
+.keyboard-num {
+	background: yellow;
+	color: goldenrod;
+}
+
+.keyboard-vow {
+	background: lightskyblue;
+	color: blue;
+}
+
+.keyboard-con {
+	background: lightgreen;
+	color: green;
+}
+
+.keyboard-pun {
+	background: rgb(255, 180, 255);
+	color: purple;
+	width: 30px;
+}
+
+.keyboard-fun {
+	background: whitesmoke;
+	color: grey;
+}

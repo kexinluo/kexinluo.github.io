@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset='UTF-8'>
+		<title>鑫空 | 在这里找到关于鑫语的一切</title>
+		<link rel="stylesheet" href="/kex/css/main.css">
+		<link rel="stylesheet" href="/kex/css/demo-ime.css">
+		<link rel="stylesheet" href="/kex/css/title-bar-printer.css">
+		<link rel="shortcut icon" href="/kex/res/favicon.png">
+	</head>
+	<body>
+		<div id="heading">
+			<div id="cover-text">
+				<h1>鑫空</h1>
+				<kex class="printer-text">在这里找到鑫语的一切</kex>
+			</div>
+			<video id="cover-video" src="/kex/res/cover.mp4" muted autoplay loop></video>
+			<!-- <img style="filter: brightness(0.5);" src="/kex/res/cover.png"> -->
+		</div>
+		<div id="paper">
+			<h1>鑫语简述</h1>
+			<p><strong>鑫语（英文：Kex，鑫语：）</strong>是一个人造语。它有一个优美的性质：<strong>言文一致</strong>。它的发音形式，只对应唯一一种书写形式。这意味着，只要说话人遵守了发音标准，记录人学会了发音的规则，就可以准确地进行听写，哪怕记录人对于词语含义和语法结构一窍不通。而它的书写形式，可以对应于相似但有相同含义的一些发音形式。这意味着，尽管每个人允许有自己的口音，但是在允许的范围内，说出来的文字应该可以容易地被辨认出（根据发音标准）是含义相同的。</p>
+			<h1>鑫语字符</h1>
+			<p>目前，鑫语共有15个<span class="keyboard-vow">元音字母</span>，25个<span class="keyboard-con">辅音字母</span>，10个<span class="keyboard-num">数字</span>，5个<span class="keyboard-pun">标点符号</span>，还有3个<span class="keyboard-aux">变音符号</span>。</p>
+			<textarea id="demo-ime" rows="5" cols="30"></textarea>
+			<div id="demo-ime-keyboard">
+				<button class="keyboard-num" onclick="demo_ime_add_char(0xf100)">&#xf100;</button>
+				<button class="keyboard-num" onclick="demo_ime_add_char(0xf101)">&#xf101;</button>
+				<button class="keyboard-num" onclick="demo_ime_add_char(0xf102)">&#xf102;</button>
+				<button class="keyboard-num" onclick="demo_ime_add_char(0xf103)">&#xf103;</button>
+				<button class="keyboard-num" onclick="demo_ime_add_char(0xf104)">&#xf104;</button>
+				<button class="keyboard-num" onclick="demo_ime_add_char(0xf105)">&#xf105;</button>
+				<button class="keyboard-num" onclick="demo_ime_add_char(0xf106)">&#xf106;</button>
+				<button class="keyboard-num" onclick="demo_ime_add_char(0xf107)">&#xf107;</button>
+				<button class="keyboard-num" onclick="demo_ime_add_char(0xf108)">&#xf108;</button>
+				<button class="keyboard-num" onclick="demo_ime_add_char(0xf109)">&#xf109;</button>
+				<button class="keyboard-pun" onclick="demo_ime_add_char(0xf10a)">&#xf10a;</button>
+				<button class="keyboard-pun" onclick="demo_ime_add_char(0xf10b)">&#xf10b;</button>
+				<button class="keyboard-pun" onclick="demo_ime_add_char(0xf10c)">&#xf10c;</button>
+				<button class="keyboard-pun" onclick="demo_ime_add_char(0xf10d)">&#xf10d;</button>
+				<button class="keyboard-pun" onclick="demo_ime_add_char(0xf10e)">&#xf10e;</button>
+				<div class="keyboard-br"></div>
+				<button class="keyboard-vow" onclick="demo_ime_add_char(0xf000)">&#xf000;</button>
+				<button class="keyboard-vow" onclick="demo_ime_add_char(0xf001)">&#xf001;</button>
+				<button class="keyboard-vow" onclick="demo_ime_add_char(0xf002)">&#xf002;</button>
+				<button class="keyboard-vow" onclick="demo_ime_add_char(0xf003)">&#xf003;</button>
+				<button class="keyboard-vow" onclick="demo_ime_add_char(0xf004)">&#xf004;</button>
+				<button class="keyboard-vow" onclick="demo_ime_add_char(0xf005)">&#xf005;</button>
+				<button class="keyboard-vow" onclick="demo_ime_add_char(0xf006)">&#xf006;</button>
+				<button class="keyboard-vow" onclick="demo_ime_add_char(0xf007)">&#xf007;</button>
+				<button class="keyboard-vow" onclick="demo_ime_add_char(0xf008)">&#xf008;</button>
+				<button class="keyboard-vow" onclick="demo_ime_add_char(0xf009)">&#xf009;</button>
+				<button class="keyboard-vow" onclick="demo_ime_add_char(0xf00a)">&#xf00a;</button>
+				<button class="keyboard-vow" onclick="demo_ime_add_char(0xf00b)">&#xf00b;</button>
+				<button class="keyboard-vow" onclick="demo_ime_add_char(0xf00c)">&#xf00c;</button>
+				<button class="keyboard-vow" onclick="demo_ime_add_char(0xf00d)">&#xf00d;</button>
+				<button class="keyboard-vow" onclick="demo_ime_add_char(0xf00e)">&#xf00e;</button>
+				<div class="keyboard-br"></div>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf00f)">&#xf00f;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf010)">&#xf010;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf011)">&#xf011;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf012)">&#xf012;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf013)">&#xf013;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf014)">&#xf014;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf015)">&#xf015;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf016)">&#xf016;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf017)">&#xf017;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf018)">&#xf018;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf019)">&#xf019;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf01a)">&#xf01a;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf01b)">&#xf01b;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf01c)">&#xf01c;</button>
+				<div class="keyboard-br"></div>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf01d)">&#xf01d;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf01e)">&#xf01e;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf01f)">&#xf01f;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf020)">&#xf020;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf021)">&#xf021;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf022)">&#xf022;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf023)">&#xf023;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf024)">&#xf024;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf025)">&#xf025;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf026)">&#xf026;</button>
+				<button class="keyboard-con" onclick="demo_ime_add_char(0xf027)">&#xf027;</button>
+				<button class="keyboard-aux" onclick="demo_ime_add_char(0xf028)">&#xf10a;&#xf028;</button>
+				<button class="keyboard-aux" onclick="demo_ime_add_char(0xf029)">&#xf10a;&#xf029;</button>
+				<button class="keyboard-aux" onclick="demo_ime_add_char(0xf02a)">&#xf10a;&#xf02a;</button>
+				<div class="keyboard-br"></div>
+				<button class="keyboard-fun" onclick="demo_ime_add_char(10)">换行</button>
+				<button class="keyboard-fun" onclick="demo_ime_add_char(32)" id="keboard-spacebar"></button>
+				<button class="keyboard-fun" onclick="demo_ime_add_char(-1)">删除</button>
+			</div>
+			<h1>如何学习？</h1>
+			<p>你可以阅读<a href="/kex/tutorial">官方教程</a>来学习鑫语。</p>
+		</div>
+	</body>
+	<script src="/kex/js/main.js"></script>
+	<script src="/kex/js/title-bar-printer.js"></script>
+</html>

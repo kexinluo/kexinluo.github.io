@@ -1,0 +1,28 @@
+.printer-text {
+	display: inline-block;
+	position: relative;
+	font-size: 40px;
+	height: 60px;
+	line-height: 60px;
+	color: white;
+}
+
+.printer-text::after {
+	content: '';
+	position: absolute;
+	right: -10px;
+	top: 5px;
+	height: 50px;
+	width: 3px;     
+	background-color: #fff;
+	animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+	0%, 100% {
+		background-color: #fff;
+	}
+	50% {
+		background-color: transparent;
+	}
+}
