@@ -2,28 +2,17 @@
 <html>
 	<head>
 		<meta charset='UTF-8'>
-		<title>鑫空 | 在这里找到关于鑫语的一切</title>
+		<title>鑫语编辑器 - 鑫空工具</title>
 		<link rel="stylesheet" href="/kex/css/main.css">
 		<link rel="stylesheet" href="/kex/css/demo-ime.css">
-		<link rel="stylesheet" href="/kex/css/title-bar-printer.css">
+		<link rel="stylesheet" href="/kex/css/ime.css">
 		<link rel="shortcut icon" href="/kex/res/favicon.png">
+		<script src="https://kit.fontawesome.com/77e2a67176.js" crossorigin="anonymous"></script>
 	</head>
-	<body style="background: rgb(1, 9, 24);">
-		<div id="heading">
-			<div id="cover-text">
-				<h1>鑫空</h1>
-				<kex class="printer-text">在这里找到鑫语的一切</kex>
-			</div>
-			<!-- <video id="cover-video" src="/kex/res/cover.mp4" muted autoplay loop></video> -->
-
-			<img style="filter: brightness(0.5);" src="/kex/res/cover.jpg">
-		</div>
-		<div id="paper" style="box-shadow: 10px 10px 10px 10px rgb(0, 5, 12); !important;">
-			<h1>鑫语简述</h1>
-			<p><strong>鑫语（英文：Kex，鑫语：）</strong>是一个人造语。它有一个优美的性质：<strong>言文一致</strong>。它的发音形式，只对应唯一一种书写形式。这意味着，只要说话人遵守了发音标准，记录人学会了发音的规则，就可以准确地进行听写，哪怕记录人对于词语含义和语法结构一窍不通。而它的书写形式，可以对应于相似但有相同含义的一些发音形式。这意味着，尽管每个人允许有自己的口音，但是在允许的范围内，说出来的文字应该可以容易地被辨认出（根据发音标准）是含义相同的。</p>
-			<h1>鑫语字符</h1>
-			<p>目前，鑫语共有15个<span class="keyboard-vow">元音字母</span>，25个<span class="keyboard-con">辅音字母</span>，10个<span class="keyboard-num">数字</span>，5个<span class="keyboard-pun">标点符号</span>，还有3个<span class="keyboard-aux">变音符号</span>。</p>
-			<textarea id="demo-ime" rows="5" cols="30"></textarea>
+	<body>
+		<div id="left" class="aside">
+			<h1>输入<button onclick="navigator.clipboard.writeText(demo_ime.value)">复制</button></h1>
+			<textarea id="demo-ime"></textarea>
 			<div id="demo-ime-keyboard">
 				<button class="keyboard-num" onclick="demo_ime_add_char(0xf100)">&#xf100;</button>
 				<button class="keyboard-num" onclick="demo_ime_add_char(0xf101)">&#xf101;</button>
@@ -92,16 +81,16 @@
 				<button class="keyboard-fun" onclick="demo_ime_add_char(0)">清除</button>
 				<button class="keyboard-fun" onclick="demo_ime_add_char(-1)">删除</button>
 			</div>
-			<h1>如何学习？</h1>
-			<p>你可以阅读<a href="/kex/tutorial">官方教程</a>来学习鑫语。</p>
-			<h1>工具</h1>
-			<p>
-				<ul>
-					<li><a href="/kex/tools/ime.html">鑫语编辑器</a></li>
-				</ul>
-			</p>
+			<div id="control-panel">
+				<button class="function" onclick="latinize_input()">拉丁化</button>
+				<button class="function" onclick="unlatinize_input()">拉丁化还原</button>
+			</div>
+		</div>
+		<div id="right" class="aside">
+			<h1>输出<button onclick="navigator.clipboard.writeText(output_area.value)">复制</button></h1>
+			<textarea id="output-area"></textarea>
 		</div>
 	</body>
 	<script src="/kex/js/main.js"></script>
-	<script src="/kex/js/title-bar-printer.js"></script>
+	<script src="/kex/js/ime.js"></script>
 </html>

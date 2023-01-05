@@ -181,12 +181,8 @@ nav a:hover, nav div:hover {
 	color: white;
 }
 
-i:not(.lb) {
+i {
 	margin: 0 10px 0 10px;
-}
-
-i .lb {
-	margin: 0;
 }
 
 button {
@@ -201,6 +197,18 @@ button {
 
 button:hover {
 	filter: brightness(0.8);
+}
+
+button.function {
+	border-color: hsl(216, 60%, 40%);
+	background: hsl(216, 60%, 60%);
+	color: white;
+	margin: 10px;
+	padding: 10px;
+}
+
+button.function:active {
+	filter: brightness(0.5);
 }
 
 .table-out {
@@ -283,7 +291,7 @@ spk::before {
 
 div.dict {
 	background: hsla(216, 60%, 60%, 0.1);
-	margin: auto;
+	margin: 20px auto;
 	padding: 20px;
 	border-radius: 20px;
 	border-left: 10px solid hsl(216, 60%, 60%);
@@ -316,7 +324,7 @@ img.il {
 
 div.exercise {
 	background: hsla(150, 60%, 60%, 0.1);
-	margin: auto;
+	margin: 20px auto;
 	padding: 20px;
 	border-radius: 20px;
 	border-left: 10px solid hsl(150, 60%, 60%);
@@ -333,16 +341,18 @@ div.exercise > div {
 	margin: 20px 0 0 0;
 }
 
-p.example {
-	background: grey;
-	border-radius: 5px;
+div.example {
+	background: rgba(0, 128, 128, 0.1);
+	margin: 20px auto;
+	padding: 20px;
+	border-radius: 20px;
+	border-left: 10px solid rgb(0, 128, 128);
+	box-shadow: 5px 5px 5px #CCC;
 }
 
-p.example::before {
-	content: "例";
-	color: white;
-	background: grey;
-	border-radius: 5px;
+div.example .translation {
+	color: grey;
+	display: inline;
 }
 
 p.index {
@@ -388,5 +398,34 @@ lb.n::before {
 
 lb.v::before {
 	content: "v.";
+	background: rgb(184, 61, 186);
+}
+
+lb.eg::before {
+	content: "例";
 	background: rgb(88, 88, 88);
+}
+
+lb.tr::before {
+	content: "译";
+	background: teal;
+}
+
+textarea {
+	display: block;
+	resize: none;
+	font-size: 20pt;
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	outline: none;
+	border: 1px solid #5C8DD6;
+	border-radius: 5px;
+	background: hsl(216, 10%, 97%);
+	transition: background 0.2s;
+	-webkit-transition: background 0.2s;
+}
+
+textarea:focus {
+	background: hsl(216, 10%, 90%);
 }

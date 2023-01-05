@@ -1,0 +1,34 @@
+.aside {
+	position: absolute;
+	width: 48%;
+	height: 90%;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.aside *:not(i) {
+	font-family: "Kex Sans", "SY Sans", sans-serif;
+}
+
+#left {
+	left: 0;
+}
+
+#right {
+	left: 50%;
+}
+
+#demo-ime {
+	height: 40%;
+}
+
+#output-area {
+	height: 90%;
+}
+
+#control-panel {
+	display: flex;
+	margin-top: 20px;
+	flex-wrap: wrap;
+    justify-content: center;
+}
